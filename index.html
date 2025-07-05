@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyNow - Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <h1>🌦️ SkyNow</h1>
+      <p id="quote">"Let the weather guide your vibe!"</p>
+    </header>
+
+    <!-- Search & Location -->
+    <section class="search-section">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+      <button id="locationBtn">📍 Use My Location</button>
+    </section>
+
+    <!-- Main Weather Display -->
+    <section class="weather-main">
+      <div class="temp-block">
+        <h2 id="cityName">City Name</h2>
+        <div class="temperature">
+          <span id="currentTemp">--°C</span>
+          <span id="weatherDesc">--</span>
+        </div>
+        <div class="feels-like">
+          Feels like: <span id="feelsLike">--°C</span>
+        </div>
+        <div class="icon" id="weatherIcon">⛅</div>
+      </div>
+
+      <div class="details-block">
+        <div>Humidity: <span id="humidity">--%</span></div>
+        <div>Wind: <span id="wind">-- km/h</span></div>
+        <div>Pressure: <span id="pressure">-- hPa</span></div>
+        <div>Visibility: <span id="visibility">-- km</span></div>
+        <div>Sunrise: <span id="sunrise">--</span></div>
+        <div>Sunset: <span id="sunset">--</span></div>
+      </div>
+    </section>
+
+    <!-- Time, Date & Mode Toggle -->
+    <section class="clock-mode">
+      <div id="localTime">🕒 --:--</div>
+      <div class="toggle-group">
+        <label>🌞 / 🌙</label>
+        <input type="checkbox" id="themeToggle" />
+      </div>
+    </section>
+
+    <!-- Forecast Section -->
+    <section class="forecast-section">
+      <h3>Hourly Forecast</h3>
+      <div class="hourly" id="hourlyForecast">
+        <!-- JS will fill this -->
+      </div>
+
+      <h3>7-Day Forecast</h3>
+      <div class="weekly" id="weeklyForecast">
+        <!-- JS will fill this -->
+      </div>
+    </section>
+
+    <!-- Suggestions, Tips, Alerts -->
+    <section class="extras">
+      <div class="tip-box">
+        <h4>💡 Weather Tip</h4>
+        <p id="weatherTip">Stay hydrated in hot weather!</p>
+      </div>
+      <div class="clothing-box">
+        <h4>🧥 What to Wear</h4>
+        <p id="clothingSuggest">Light cotton clothes recommended.</p>
+      </div>
+      <div class="health-box">
+        <h4>⚠️ Health Alert</h4>
+        <p id="healthAlert">UV index is high. Use sunscreen!</p>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section class="favorites">
+      <h4>⭐ Favorite Cities</h4>
+      <ul id="favoriteList">
+        <!-- JS will populate this -->
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ☁ by Preksha | SkyNow</p>
+      <p>Offline Mode: <span id="offlineStatus">Active/Inactive</span></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
